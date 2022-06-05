@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    width: 100%;
+    text-align: end;
+    padding-right: 1rem;
+    /* 16px */
+    background-color: hsl(189, 41%, 97%);
+    padding: 1rem;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    border: none;
+}
+
+.calculator-container {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: hsla(183, 100%, 15%, 0.4) 5px 5px, hsla(183, 100%, 15%, 0.3) 10px 10px, hsla(183, 100%, 15%, 0.2) 15px 15px, hsla(183, 100%, 15%, 0.1) 20px 20px, hsla(183, 100%, 15%, 0.05) 25px 25px;
+}
+
+
+.calculator-container-first {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2rem;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+#bill {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0.625rem;
+    background-position-y: center;
+
+}
+
+#bill:focus {
+    outline: 0.188rem solid hsl(172, 67%, 45%);
+}
+
+.bill {
+    margin-bottom: 2.5rem;
+}
+
+#people {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0.625rem;
+    background-position-y: center;
+}
+
+#people:focus {
+    outline: 0.188rem solid hsl(172, 67%, 45%);
+}
+
+.people {
+    margin-top: 2.5rem;
+}
+
+.input-tip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.625rem;
+    margin-top: 1.2rem;
+}
+
+input[type=button] {
+    background-color: hsl(183, 100%, 15%);
+    padding: 0.75rem 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+
+}
+
+input[type="button"].active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(185, 41%, 84%);
+}
+
+
+.input-tip .custom-btn {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(185, 41%, 84%);
+    margin-bottom: 1rem;
+    text-align: center;
+    height: 4rem;
+    font-size: 1.25rem;
+    width: 9.375rem;
+    border: none;
+    border-radius: 0.313rem;
+    cursor: pointer;
+
+}
+
+.input-tip .custom-btn:focus {
+    outline: 0.188rem solid hsl(172, 67%, 45%);
+}
+
+
+.calculator-container-sec {
+    background-color: hsl(183, 100%, 15%);
+    margin-left: 3rem;
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px 0px 40px;
+    border-radius: 0.625rem;
+    width: 28rem;
+
+
+}
+
+.reset-btn {
+    height: 3rem;
+    justify-self: flex-end;
+    text-transform: uppercase;
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    letter-spacing: 1.1px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.313rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.number-container {
+    margin-left: 0.625rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 90%;
+}
+
+.number-container h1 {
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+.number-container span {
+    font-size: 0.8rem;
+    color: hsl(186, 14%, 43%);
+
+}
+
+.amount {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.amount>p {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .calculator-container {
+
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .calculator-container-first {
+        width: 100%;
+    }
+
+    .calculator-container-sec {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+
+        padding: 2rem 2rem 2rem 2rem;
+
+    }
+
+    .number-container {
+        justify-content: space-around;
+    }
+
+    .number-container h1 {
+        color: hsl(172, 67%, 45%);
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+    #form {
+        width: 95vw;
+    }
+
+    .input-tip {
+        column-gap: 5px;
+    }
+
+    input[type=button] {
+        padding: 0.75rem 0;
+    }
+
+    .calculator-container {
+        width: 23rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    .calculator-container-sec {
+        margin-top: 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #form {
+        width: 95vw;
+    }
+
+    .input-tip {
+        column-gap: 1px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .people {
+        margin: 0;
+        padding: 0;
+    }
+
+    input[type=button] {
+        padding: 0.15rem 0;
+        margin: 1px;
+        font-size: 1.25rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
+
+    .bill {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .calculator-container {
+        width: 21rem;
+        height: 37rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    .calculator-container-sec {
+        margin-top: 1rem;
+        margin-left: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
