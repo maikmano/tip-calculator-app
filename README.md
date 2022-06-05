@@ -1,8 +1,8 @@
-# NFT Card 
+# TIP CALCULATOR APP
 
-Esse é um projeto de uma calculadora de gorjeta[esse é um desafio da frontendmentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
+Esse é um projeto de uma calculadora de gorjeta. [esse é um desafio da frontendmentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
 
-- [Clique Aqui para visualizar]()
+- [Clique Aqui para visualizar](https://maikmano-tip-calculator-app.netlify.app/)
 
 ### 💡 O Desafio:
 
