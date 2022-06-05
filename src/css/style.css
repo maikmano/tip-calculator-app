@@ -228,6 +228,15 @@ input[type="button"].active {
     .calculator-container-first {
         width: 100%;
     }
+    
+    input[type=button] {
+        padding: 0.15rem 0;
+        margin: 0.05rem;
+        border: 0;
+        border-radius: 2px;
+        max-width: 100%;
+
+    }
 
     .calculator-container-sec {
         width: 100%;
@@ -272,6 +281,8 @@ input[type="button"].active {
         margin: 0.05rem;
         border: 0;
         border-radius: 2px;
+        max-width: 100%;
+
     }
 
     .calculator-container {
@@ -304,10 +315,13 @@ input[type="button"].active {
 
     input[type=button] {
         padding: 0.15rem 0;
+        padding: 0;
         margin: 0;
         font-size: 1.25rem;
         border-radius: 2px;
         margin-bottom: 1rem;
+        max-width: 100%;
+        margin-left: 0;
     }
 
     .bill {
